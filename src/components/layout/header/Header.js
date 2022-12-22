@@ -10,7 +10,8 @@ import { Link, NavLink } from 'react-router-dom';
 import DefaultAvatar from '../../../asset/image/user-default-avatar.jpg'
 
 
-const Header = () => {
+const Header = (props) => {
+  const {toggleTheme} = props;
   return (
     <div className='header'>
       <div className="header__left">
@@ -33,7 +34,10 @@ const Header = () => {
 
       <div className="header__right">
         <div className="header__right--cover">
-          <MdDarkMode className='header__right--cover-icon' />
+          <MdDarkMode 
+          className='header__right--cover-icon' 
+          onClick={toggleTheme}
+          />
         </div>
         <div className="header__right--cover">
           <FaFacebookMessenger className='header__right--cover-icon' />
@@ -41,7 +45,7 @@ const Header = () => {
         <div className="header__right--cover">
           <IoNotifications className='header__right--cover-icon' />
         </div>
-        <img src={DefaultAvatar} alt="User" />
+        <img src={DefaultAvatar} alt="User" disable/>
       </div>
     </div>
   )

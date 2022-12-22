@@ -5,9 +5,13 @@ $base-color: #f0f2f5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.625rem 1.25rem;
+    padding: 0.625rem 0.625rem;
+    margin-right: 0.625rem;
     height: 3.125rem;
-    border-bottom: 1px solid lightgrey;
+    // border-bottom: 1px solid lightgrey;
+    position: sticky;
+    top: 0;
+    // background-color: #fff;
 
     // left
     &__left {
@@ -48,15 +52,22 @@ $base-color: #f0f2f5;
 
     // middle
     &__middle {
-        flex-basis: calc(100% / 3);
+        flex-basis: calc(100% / 2);
         display: flex;
         align-items: center;
-        gap: 5rem;
+        gap: 1rem;
         &--icon {
-            color: #000;
+            // color: #000;
             font-size: 1.25rem;
+            padding: 0.625rem 2.25rem;
+            border-radius: 0.125rem;
+            &:hover {
+                background-color: $base-color;
+                color: blue !important;
+            }
             &.active {
-                color: blue;
+                color: blue !important;
+                border-bottom: 2px solid blue;
             }
         }
     }
@@ -65,7 +76,7 @@ $base-color: #f0f2f5;
     &__right {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.625rem;
         color: #000;
 
         img {

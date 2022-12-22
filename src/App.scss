@@ -1,0 +1,86 @@
+$bg-color: #f0f2f5;
+$active-color: #7fffd4;
+
+.App {
+  .App__container {
+    display: flex;
+    background-color: $bg-color;
+
+    .left-bar {
+      // flex-basis: 16%;
+      flex: 2;
+    }
+
+    .outlet {
+      // flex-basis: 68%;
+      flex: 6;
+      background-color: azure;
+    }
+
+    .right-bar {
+      // flex-basis: 16%;
+      flex: 2.1;
+    }
+  }
+
+}
+
+// Theme
+
+// don't set color in component style file, you can set color without 'ghi đè kkk'
+
+$bg-color: #f0f2f5;
+$active-color: #7fffd4;
+$active-color-dark: #555;
+
+
+.dark {
+  background-color: #333 !important;
+  color: #fff;
+  border: #555;
+
+
+  .header {
+    border-bottom: 1px solid #555;
+    &__middle--icon {
+      color: #fff;
+    }
+  }
+  .left-bar__item {
+    &:hover {
+      background-color: $active-color-dark;
+    }
+  }
+  .right-bar__item, .right-bar__item--contact {
+    &:hover {
+      background-color: $active-color-dark;
+    }
+  }
+  .home {
+    background-color: #555;
+  }
+  
+}
+
+.light {
+  background-color: $bg-color;
+  color: #333;
+  
+  .header {
+    border-bottom: 1px solid lightgrey;
+    background-color: #fff;
+    &__middle--icon {
+      color: #000;
+    }
+  }
+  .left-bar__item {
+    &:hover {
+      background-color: $active-color;
+    }
+  }
+  .right-bar__item {
+    &:hover {
+      background-color: $active-color;
+    }
+  }
+}
