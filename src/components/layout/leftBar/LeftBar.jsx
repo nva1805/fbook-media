@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './leftBar.scss'
 import DefaultAvatar from '../../../asset/image/user-default-avatar.jpg'
+import { AuthContext } from '../../context/authContext'
 
 
 const LeftBar = () => {
 
+  const { currentUser } = useContext(AuthContext)
+
   return (
     <div className='left-bar'>
       <div className="left-bar__item">
-        <img src={DefaultAvatar} alt="" />
-        <p>Nguyen Van Anh</p>
+        <img src={currentUser && currentUser.profilePic ? currentUser.profilePic : DefaultAvatar} alt="" />
+        <p>{currentUser && currentUser.name ? currentUser.name: 'Default Name'}</p>
       </div>
       <div className="left-bar__item">
         <i style={

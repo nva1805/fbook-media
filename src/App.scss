@@ -14,7 +14,6 @@ $active-color: #7fffd4;
     .outlet {
       // flex-basis: 68%;
       flex: 6;
-      background-color: azure;
     }
 
     .right-bar {
@@ -45,23 +44,31 @@ $active-color-dark: #555;
     &__middle--icon {
       color: #fff;
     }
+    .dark-icon {
+      display: none;
+    }
   }
+
   .left-bar__item {
     &:hover {
       background-color: $active-color-dark;
     }
   }
+
   .right-bar__item, .right-bar__item--contact {
     &:hover {
       background-color: $active-color-dark;
     }
   }
+
   .home {
     background-color: #555;
   }
   
 }
 
+
+// light
 .light {
   background-color: $bg-color;
   color: #333;
@@ -71,6 +78,9 @@ $active-color-dark: #555;
     background-color: #fff;
     &__middle--icon {
       color: #000;
+    }
+    .light-icon {
+      display: none;
     }
   }
   .left-bar__item {
@@ -82,5 +92,8 @@ $active-color-dark: #555;
     &:hover {
       background-color: $active-color;
     }
+  }
+  .home {
+    background-color: #fff;
   }
 }

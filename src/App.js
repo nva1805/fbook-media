@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './components/layout/header/Header'
 import LeftBar from './components/layout/leftBar/LeftBar'
@@ -6,6 +6,8 @@ import RightBar from './components/layout/rightBar/RightBar'
 import './App.scss'
 
 const App = () => {
+  // const {currentUser} = useContext(AuthContext)
+
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || 'light'
   );
@@ -20,6 +22,8 @@ const App = () => {
     localStorage.setItem('theme', theme);
     document.body.className = theme;
   }, [theme]);
+
+
 
   return (
     <div className={`App ${theme}`}>

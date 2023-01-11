@@ -4,19 +4,22 @@ import Login from '../components/login/Login'
 import App from "../App";
 import Home from "../components/home/Home";
 import { Profile } from "../components/profile/Profile";
+import { useContext } from "react";
+import { AuthContext } from "../components/context/authContext";
 
 
-// Protected function
-const currentUser = true;
+
+
 const ProtectedRoute = ({ children }) => {
+    const { currentUser } = useContext(AuthContext)
     if (!currentUser) {
         return <Navigate to="/login" />
     }
     return children
 }
 
-
 const router = createBrowserRouter([
+
     {
         path: "/",
         element: (

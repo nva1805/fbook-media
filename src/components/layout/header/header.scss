@@ -93,11 +93,17 @@ $base-color: #f0f2f5;
         border-radius: 50%;
         background-color: $base-color;
         position: relative;
+        &:hover {
+            background-color: aqua;
+        }
 
         &-icon {
             position: absolute;
             top: 25%;
-            transform: translateX(50%);
+            transform: translateX(50%); 
+            &.light-icon {
+                color: red;
+            }
         }
     }
 }
