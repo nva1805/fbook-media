@@ -5,4 +5,11 @@
     border-radius: 0.625rem;
     width: 70%;
     height: 100vh !important;
+    // just scroll home bar
+    position: sticky;
+    // top: 3.125rem;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
