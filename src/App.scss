@@ -2,6 +2,8 @@ $bg-color: #f0f2f5;
 $active-color: #7fffd4;
 
 .App {
+  overflow: hidden;
+
   .App__container {
     display: flex;
     background-color: $bg-color;
@@ -29,21 +31,24 @@ $active-color: #7fffd4;
 // don't set color in component style file, you can set color without 'ghi đè kkk'
 
 $bg-color: #f0f2f5;
+$bg-color-dark: #333;
 $active-color: #7fffd4;
 $active-color-dark: #555;
 
 
 .dark {
-  background-color: #333 !important;
+  background-color: $bg-color-dark !important;
   color: #fff;
   border: #555;
 
 
   .header {
     border-bottom: 1px solid #555;
+
     &__middle--icon {
       color: #fff;
     }
+
     .dark-icon {
       display: none;
     }
@@ -55,7 +60,8 @@ $active-color-dark: #555;
     }
   }
 
-  .right-bar__item, .right-bar__item--contact {
+  .right-bar__item,
+  .right-bar__item--contact {
     &:hover {
       background-color: $active-color-dark;
     }
@@ -63,8 +69,28 @@ $active-color-dark: #555;
 
   .home {
     background-color: #555;
+
+    .react-fragment {
+      background-color: #000;
+    }
+
+    .post {
+      background-color: #000;
+      .view-comment {
+        .comments {
+          .comment {
+            .info {
+              background-color: $bg-color-dark;
+            }
+          }
+        }
+      }
+    }
   }
-  
+  .profile {
+    background-color: $bg-color-dark;
+  }
+
 }
 
 
@@ -72,28 +98,54 @@ $active-color-dark: #555;
 .light {
   background-color: $bg-color;
   color: #333;
-  
+
   .header {
     border-bottom: 1px solid lightgrey;
     background-color: #fff;
+
     &__middle--icon {
       color: #000;
     }
+
     .light-icon {
       display: none;
     }
   }
+
   .left-bar__item {
     &:hover {
       background-color: $active-color;
     }
   }
+
   .right-bar__item {
     &:hover {
       background-color: $active-color;
     }
   }
+
   .home {
+    background-color: $bg-color;
+
+    .react-fragment {
+      background-color: #fff;
+    }
+
+    .post {
+      background-color: #fff;
+
+      .view-comment {
+        .comments {
+          .comment {
+            .info {
+              background-color: $bg-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .profile {
     background-color: #fff;
   }
 }
