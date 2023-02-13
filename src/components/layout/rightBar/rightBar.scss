@@ -3,13 +3,13 @@ $bg-color: #f0f2f5;
 // $active-color: #7fffd4;
 
 .right-bar {
-    height: calc(100vh - 4.2rem);
+    height: calc(100vh - 3rem);
     padding-top: 0.625rem;
     // background-color: $bg-color;
     position: sticky;
     top: 3.125rem;
     overflow: scroll;
-    margin-right: 1rem;
+    // margin-right: 1rem;
 
     &::-webkit-scrollbar {
         display: none;
