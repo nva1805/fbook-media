@@ -1,6 +1,7 @@
 $base-color: #f0f2f5;
 
 .header {
+    z-index: 99;
     width: 100vw;
     display: flex;
     justify-content: space-between;
