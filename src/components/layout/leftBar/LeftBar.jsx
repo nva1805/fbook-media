@@ -39,7 +39,7 @@ const LeftBar = () => {
           }}
         >
         </i>
-        <p>Nguyen Van Anh</p>
+        <p>Messenger</p>
       </div>
 
       <div className="left-bar__item">
