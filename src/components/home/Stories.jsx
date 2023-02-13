@@ -32,22 +32,28 @@ const Stories = () => {
     ]
     const { currentUser } = useContext(AuthContext)
     return (
-        <div className='stories'>
-            <div className="stories__story">
-                <img src={currentUser.profilePic} alt="" />
-                <div className='stories__story--mine'>
-                    <button>+</button>
-                    <span>{currentUser.name}</span>
-                </div>
-
+        <div className='react-fragment'>
+            <div className="title">
+            <h6>Story</h6>
+            <h6>Reel</h6>
             </div>
+            <div className='stories'>
+                <div className="stories__story">
+                    <img src={currentUser.profilePic} alt="" />
+                    <div className='stories__story--mine'>
+                        <button>+</button>
+                        <span>{currentUser.name}</span>
+                    </div>
 
-            {stories.map((item, index) => (
-                <div key={index} className="stories__story">
-                    <img src={item.img} alt="" />
-                    <span>{item.name}</span>
                 </div>
-            ))}
+
+                {stories.map((item, index) => (
+                    <div key={index} className="stories__story">
+                        <img src={item.img} alt="" />
+                        <span>{item.name}</span>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
