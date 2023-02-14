@@ -58,12 +58,16 @@
             justify-content: space-around;
             border-top: 1px solid lightgray;
             border-bottom: 1px solid lightgray;
+            
 
             &__react {
                 cursor: pointer;
                 -webkit-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
+                &:hover {
+                    color: blue;
+                }
             }
 
             &__comment {
@@ -71,6 +75,9 @@
                 -webkit-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
+                &:hover {
+                    color: blue;
+                }
             }
         }
 

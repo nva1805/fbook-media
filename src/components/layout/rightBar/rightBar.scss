@@ -9,7 +9,13 @@ $bg-color: #f0f2f5;
     position: sticky;
     top: 3.125rem;
     overflow: scroll;
-    // margin-right: 1rem;
+
+    @include mobile {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
 
     &::-webkit-scrollbar {
         display: none;

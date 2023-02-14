@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .react-fragment {
     background-color: #fff;
     border-radius: 0.625rem;
@@ -14,7 +16,7 @@
     h6 {
         margin-left: 1.625rem;
         padding: 0.625rem;
-        
+
         &:first-child {
             color: blue;
             text-decoration: overline;
@@ -35,6 +37,10 @@
 
         &::-webkit-scrollbar {
             display: none;
+        }
+
+        @include mobile {
+            height: 10rem;
         }
 
         &__story {
@@ -73,6 +79,14 @@
                 span {
                     color: #000 !important;
                     text-align: center !important;
+
+                    @include mobile {
+                        // display: none !important;
+                        width: 2.6rem;
+                        height: 1.2rem;
+                        overflow: hidden !important;
+                        text-overflow: ellipsis !important;
+                    }
                 }
             }
 

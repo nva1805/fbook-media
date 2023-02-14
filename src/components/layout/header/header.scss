@@ -1,3 +1,5 @@
+@import '../../../App.scss';
+
 $base-color: #f0f2f5;
 
 .header {
@@ -19,12 +21,18 @@ $base-color: #f0f2f5;
         display: flex;
         align-items: center;
         gap: 1rem;
+
+
     }
 
     &__left--logo {
         color: blue;
         font-weight: bold;
         font-size: 1.5rem;
+
+        @include mobile {
+            font-size: 1.2rem;
+        }
     }
 
     &__left--search {
@@ -35,6 +43,13 @@ $base-color: #f0f2f5;
             background-color: $base-color;
             border: none;
             padding: 0.2rem 0 0.3rem 3rem;
+
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
 
             &:focus {
                 outline: none;
@@ -57,15 +72,27 @@ $base-color: #f0f2f5;
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            justify-content: flex-end;
+        }
+
         &--icon {
             // color: #000;
             font-size: 1.25rem;
             padding: 0.625rem 2.25rem;
             border-radius: 0.125rem;
+
+
+
             &:hover {
                 background-color: $base-color;
                 color: blue !important;
             }
+
             &.active {
                 color: blue !important;
                 border-bottom: 2px solid blue;
@@ -94,6 +121,7 @@ $base-color: #f0f2f5;
         border-radius: 50%;
         background-color: $base-color;
         position: relative;
+
         &:hover {
             background-color: aqua;
         }
@@ -101,7 +129,8 @@ $base-color: #f0f2f5;
         &-icon {
             position: absolute;
             top: 25%;
-            transform: translateX(50%); 
+            transform: translateX(50%);
+
             &.light-icon {
                 color: red;
             }
