@@ -136,6 +136,11 @@ $active-color-dark: #555;
 
       .view-comment {
         .comments {
+          .write {
+            input {
+              background-color: $bg-color;
+            }
+          }
           .comment {
             .info {
               background-color: $bg-color;
@@ -147,5 +152,17 @@ $active-color-dark: #555;
   }
   .profile {
     background-color: #fff;
+  }
+}
+
+@mixin mobile {
+  @media (max-width:480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width:960px) {
+    @content;
   }
 }
