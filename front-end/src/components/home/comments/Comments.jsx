@@ -3,7 +3,7 @@ import { AuthContext } from '../../context/authContext'
 import './comments.scss'
 
 const Comments = (props) => {
-    const {postId} = props
+    // const {postId} = props
     const { currentUser } = useContext(AuthContext)
     // const input = useRef(null);
     // useEffect(() => {
