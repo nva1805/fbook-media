@@ -65,6 +65,7 @@ const Post = () => {
           </div>
           <div className="view-comment">
             {openComment && <Comments />}
+            {/* <Comments postId = {post.id}/> */}
           </div>
         </div>
       ))

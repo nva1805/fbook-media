@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../context/authContext'
 import './comments.scss'
 
-const Comments = () => {
+const Comments = (props) => {
+    const {postId} = props
+    const { currentUser } = useContext(AuthContext)
+    // const input = useRef(null);
+    // useEffect(() => {
+    //     input.current.focus()
+    // })
+
     const comments = [
         {
             id: 1,
@@ -21,6 +29,17 @@ const Comments = () => {
     ]
     return (
         <div className='comments'>
+            <div className="write">
+                <div className="currentUser">
+                    <img src={currentUser.profilePic} alt="" />
+                    {/* <span>{currentUser.name}</span> */}
+                </div>
+                <input type="text" placeholder='Write a comment...'
+                    // ref={input}
+                    autoFocus
+                />
+                <button className='btn btn-primary'>Send</button>
+            </div>
             {
                 comments.map((comment) => (
                     <div className="comment">

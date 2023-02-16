@@ -1,21 +1,58 @@
 .comments {
+    .write {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .currentUser {
+            display: flex;
+            align-items: center;
+
+            // gap: 0.625rem;
+            img {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        input {
+            margin: 0 0.625rem 0 0.625rem;
+            width: 100%;
+            border: none;
+            border-radius: 1.25rem;
+            padding: 0.625rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
     .comment {
         display: flex;
         margin-bottom: 1.25rem;
+        
+
         img {
             width: 2rem;
             height: 2rem;
             border-radius: 50%;
         }
+
         .info {
             flex: 6;
-            margin-left: 0.625rem ;
+            margin-left: 0.625rem;
             padding: 0 0.625rem;
             border-radius: 1.25rem;
-            p{
+
+            p {
                 margin: 0;
             }
         }
+
         .comment-time {
             flex: 1;
             font-size: 0.75rem;
